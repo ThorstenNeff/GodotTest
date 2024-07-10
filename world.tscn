@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://clu175yx7njbi"]
+
+[ext_resource type="PackedScene" uid="uid://b43lml2pgd3oa" path="res://sand.tscn" id="1_q07yx"]
+[ext_resource type="PackedScene" uid="uid://c21v2wn03m04c" path="res://rock_boulder.tscn" id="2_g7ri1"]
+[ext_resource type="PackedScene" uid="uid://cq70j1rd8fts3" path="res://rock_cliff.tscn" id="3_hgkrp"]
+[ext_resource type="PackedScene" uid="uid://cmydjuhkrdni3" path="res://rock_pillar.tscn" id="4_8qx4w"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q5bfd"]
+
+[sub_resource type="Sky" id="Sky_s0ct5"]
+sky_material = SubResource("ProceduralSkyMaterial_q5bfd")
+
+[sub_resource type="Environment" id="Environment_k2h0x"]
+background_mode = 2
+sky = SubResource("Sky_s0ct5")
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_k2h0x")
+
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="sand" parent="Ground" instance=ExtResource("1_q07yx")]
+
+[node name="sand2" parent="Ground" instance=ExtResource("1_q07yx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="sand3" parent="Ground" instance=ExtResource("1_q07yx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+
+[node name="sand4" parent="Ground" instance=ExtResource("1_q07yx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 20)
+
+[node name="sand5" parent="Ground" instance=ExtResource("1_q07yx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+
+[node name="sand7" parent="Ground" instance=ExtResource("1_q07yx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+
+[node name="sand8" parent="Ground" instance=ExtResource("1_q07yx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 20)
+
+[node name="sand9" parent="Ground" instance=ExtResource("1_q07yx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -20)
+
+[node name="sand6" parent="Ground" instance=ExtResource("1_q07yx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -20)
+
+[node name="RockBoulder" parent="." instance=ExtResource("2_g7ri1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.181, 0, 19.6829)
+
+[node name="rock_cliff" parent="." instance=ExtResource("3_hgkrp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.9448, 0.0909824, -23.782)
+
+[node name="rock_pillar" parent="." instance=ExtResource("4_8qx4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6805, 0.259825, -19.187)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.55496, 0, -0.831877, 0, 1, 0, 0.831877, 0, 0.55496, -26.0805, 9, 19.9257)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.0310861, -0.771374, 0.635622, -0.596386, 0.524637, 0.60752, -0.802096, -0.36019, -0.476346, 0, 13, 0)
+shadow_enabled = true
