@@ -18,7 +18,7 @@ static var moves_priority = {
 	"idle" : 1,
 	"walk" : 2,
 	"sprint" : 3,
-	"jump_walk" : 10,
+	"jump" : 10,
 	"mid_air" : 10,
 	"landing_walk" : 10,
 	"jump_sprint" : 10,
