@@ -3,7 +3,7 @@ class_name Idle
 
 
 func _ready():
-	animation = "Idle"
+	animation = "OrcIdleskel"
 
 func check_relevance(input : InputPackage):
 	input.actions.sort_custom(moves_priority_sort)

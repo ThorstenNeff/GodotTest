@@ -4,11 +4,11 @@ class_name Walk
 const SPEED = 3.0
 
 func _ready():
-	animation = "Walking"
+	animation = "Walkingskel"
 
 func check_relevance(input : InputPackage):
-	if not player.is_on_floor():
-		return "mid_air"
+	#if not player.is_on_floor():
+	#	return "mid_air"
 	
 	input.actions.sort_custom(moves_priority_sort)
 	if input.actions[0] == "walk":

@@ -3,7 +3,8 @@ extends Node3D
 @onready var animation_player = $"../AuxScene/AnimationPlayer"
 
 @onready var moves = {
-	"idle" : $States/Idle, "walk" : $States/Walk
+	"idle" : $States/Idle, 
+	"walk" : $States/Walk
 	
 	#"sprint" : $States/Sprint
 }
@@ -23,6 +24,13 @@ func update(input : InputPackage, delta : float):
 	current_move.update(input, delta)
 
 func switch_to(state: String):
-	pass
+	if current_move != moves[state]:
+		print("Switch to ", state)
+		current_move.on_exit_state()
+		current_move = moves[state]
+		current_move.on_enter_state()
+		current_move.mark_enter_state()
+		animation_player.play(current_move.animation)
+		print("play ", current_move.animation)
 
 
