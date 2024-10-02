@@ -4,8 +4,8 @@ extends Node3D
 
 @onready var moves = {
 	"idle" : $States/Idle, 
-	"walk" : $States/Walk
-	
+	"walk" : $States/Walk,
+	"jump" : $States/Jump,
 	#"sprint" : $States/Sprint
 }
 

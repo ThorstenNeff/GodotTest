@@ -12,9 +12,9 @@ func gather_input():
 			
 	if Input.is_action_just_pressed("jump"):
 		if  Input.is_action_pressed("sprint"):
-			new_input.actions.append("jump_sprint")
+			new_input.actions.append("jump")
 		else:
-			new_input.actions.append("jump walk")
+			new_input.actions.append("jump")
 	
 	# combat
 	if new_input.actions.is_empty():

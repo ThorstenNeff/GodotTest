@@ -57,3 +57,8 @@ sprint={
 
 3d_physics/layer_1="Environment"
 3d_physics/layer_2="Characters"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

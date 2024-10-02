@@ -18,7 +18,7 @@ static var moves_priority = {
 	"idle" : 1,
 	"walk" : 2,
 	"sprint" : 3,
-	"jump_walk" : 10,
+	"jump" : 10,
 	"mid_air" : 10,
 	"landing_walk" : 10,
 	"jump_sprint" : 10,
@@ -48,20 +48,21 @@ func on_exit_state():
 	pass
 
 func mark_enter_state():
-	var now = Time.get_unix_time_from_system()
-	return now - enter_state_time
+	enter_state_time = Time.get_unix_time_from_system()
 
 func get_progress() -> float:
 	var now = Time.get_unix_time_from_system()
 	return now - enter_state_time
 
 func works_longer_than(time : float) -> bool:
-	if get_progress() >= time:
+	var t = get_progress()
+	print(t)
+	if t >= time:
 		return true
 	return false
 
 func works_less_than(time : float) -> bool:
-	if get_progress() >= time:
+	if get_progress() <= time:
 		return true
 	return false
 
