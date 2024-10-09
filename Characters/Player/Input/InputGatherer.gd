@@ -16,7 +16,9 @@ func gather_input():
 		else:
 			new_input.actions.append("jump")
 	
-	# combat
+	if Input.is_action_just_pressed("attack1"):
+		new_input.combat_actions.append("light_attack_pressed")
+	
 	if new_input.actions.is_empty():
 		new_input.actions.append("idle")
 	

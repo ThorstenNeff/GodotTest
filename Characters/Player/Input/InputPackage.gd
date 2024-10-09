@@ -2,6 +2,6 @@ extends Node
 class_name InputPackage
 
 var actions : Array[String]
-#combat
+var combat_actions : Array[String]
 
 var input_direction : Vector2

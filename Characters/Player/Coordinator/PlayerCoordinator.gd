@@ -1,4 +1,6 @@
 extends Node3D
+class_name PlayerCoordinator
+
 @onready var player = $".."
 @onready var animation_player = $"../AuxScene/AnimationPlayer"
 
