@@ -48,8 +48,7 @@ func on_exit_state():
 	pass
 
 func mark_enter_state():
-	var now = Time.get_unix_time_from_system()
-	return now - enter_state_time
+	enter_state_time = Time.get_unix_time_from_system()
 
 func get_progress() -> float:
 	var now = Time.get_unix_time_from_system()
@@ -61,7 +60,7 @@ func works_longer_than(time : float) -> bool:
 	return false
 
 func works_less_than(time : float) -> bool:
-	if get_progress() >= time:
+	if get_progress() <= time:
 		return true
 	return false
 
