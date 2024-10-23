@@ -47,6 +47,13 @@ func on_enter_state():
 func on_exit_state():
 	pass
 
+func check_combos(input : InputPackage):
+	var available_combos = get_children()
+	for combo : Combo in available_combos:
+		if combo.is_triggered_move(input):
+			has_queued_move = true
+			queued_move = combo.triggered_move
+
 func mark_enter_state():
 	enter_state_time = Time.get_unix_time_from_system()
 

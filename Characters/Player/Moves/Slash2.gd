@@ -14,7 +14,7 @@ func _ready():
 
 
 func check_relevance(input : InputPackage):
-	#check_combos(input)
+	check_combos(input)
 	if works_longer_than(ATTACK_TIMING) and did_damage == false:
 		did_damage = true
 		#attack_emitter.fire()
