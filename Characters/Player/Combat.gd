@@ -9,11 +9,11 @@ static var inputs_priority : Dictionary = {
 }
 
 
-func translate_combat_actions(new_input : Input_Package) -> InputPackage:
+func translate_combat_actions(new_input : InputPackage) -> InputPackage:
 	if not new_input.combat_actions.is_empty():
 		new_input.combat_actions.sort_custom(combat_action_priority_sort)
 		var best_input_action : String = new_input.combat_actions[0]
-		var translated_into_move_name : String = coordinator.active_weapon.basic_attacks[best_input_action]
+		var translated_into_move_name : String = player_coordinator.active_weapon.basic_attacks[best_input_action]
 		new_input.actions.append(translated_into_move_name)
 	return new_input
 

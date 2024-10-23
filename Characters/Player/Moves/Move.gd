@@ -23,7 +23,7 @@ static var moves_priority = {
 	"landing_walk" : 10,
 	"jump_sprint" : 10,
 	"landing sprint" : 10,
-	# "slash_1" : 15,
+	"slash_1" : 15,
 	# "slash_2" : 15,
 	# "slash_3" : 15
 }
