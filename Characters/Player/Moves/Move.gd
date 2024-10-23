@@ -24,8 +24,8 @@ static var moves_priority = {
 	"jump_sprint" : 10,
 	"landing sprint" : 10,
 	"slash_1" : 15,
-	# "slash_2" : 15,
-	# "slash_3" : 15
+	"slash_2" : 15,
+	"slash_3" : 15
 }
 
 static func moves_priority_sort(a : String, b : String):

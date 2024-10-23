@@ -11,7 +11,9 @@ class_name PlayerCoordinator
 	"walk" : $States/Walk,
 	"sprint" : $States/Sprint,
 	"jump" : $States/Jump,
-	"slash_1" : $States/Slash1
+	"slash_1" : $States/Slash1,
+	"slash_2" : $States/Slash2,
+	"slash_3" : $States/Slash3
 }
 
 var current_move : Move 
